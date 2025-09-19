@@ -3,3 +3,10 @@
 2025-09-19 08:35:30, EXEC, v:1, k:toalha, mode:LOCK, rate:0
 2025-09-19 08:36:22, EXEC, v:1, k:toalha, mode:LOCK, rate:0
 2025-09-19 08:36:35, MOVE, v:1, k:toalha, mode:BACK
+2025-09-19 09:45:16, MOVE, v:1, k:animal, mode:DOWN
+2025-09-19 09:53:29, MOVE, v:1, k:animal, mode:PICK
+2025-09-19 10:52:38, EXEC, v:1, k:animal, mode:FULL, rate:0, size:11
+2025-09-19 10:54:21, EXEC, v:1, k:animal, mode:FULL, rate:0, size:15
+2025-09-19 10:59:42, EXEC, v:1, k:animal, mode:FULL, rate:0, size:14
+2025-09-19 11:00:30, EXEC, v:1, k:animal, mode:FULL, rate:0, size:16
+2025-09-19 11:02:54, EXEC, v:1, k:animal, mode:FULL, rate:0, size:17

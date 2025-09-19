@@ -1,0 +1,29 @@
+{
+    "patches": [
+        {
+            "label": "2025-09-19_10-52-38",
+            "content": "@@ -232,143 +232,8 @@\n d)%0A%0A\n-    def show(self) -%3E None:%0A        print(self)%0A%0A    def __str__(self) -%3E str:%0A        return f%22%7Bself.species%7D %7Bself.age%7D %7Bself.sound%7D%22\n %0A   \n",
+            "lines": "11"
+        },
+        {
+            "label": "2025-09-19_10-54-21",
+            "content": "@@ -240,125 +240,140 @@\n def \n-ageBy(self, years: int) -%3E None:%0A        self.age += years%0A%0Adog = Animal(%22Dog%22, 3, %22Woof%22)%0Acat = Animal(%22Cat%22, 2, %22Meow%22)\n+show(self) -%3E None:%0A        print(self)%0A%0A    def __str__(self) -%3E str:%0A        return f%22%7Bself.species%7D %7Bself.age%7D %7Bself.sound%7D%22%0A        \n",
+            "lines": "15"
+        },
+        {
+            "label": "2025-09-19_10-59-42",
+            "content": "@@ -300,128 +300,65 @@\n rs%0A%0A\n-    def showInfo(self, ) -%3E None:%0A        print(f%22Species: %7Bself.species%7D, Age: %7Bself.age%7D, Sound: %7Bself.sound%7D%22) %0A    %0A    \n+dog = Animal(%22Dog%22, 3, %22Woof%22)%0Acat = Animal(%22Cat%22, 2, %22Meow%22)\n",
+            "lines": "14"
+        },
+        {
+            "label": "2025-09-19_11-00-30",
+            "content": "@@ -424,88 +424,4 @@\n     \n-def __str__(self) -%3E str:%0A        return f%22%7Bself.species%7D:%7Bself.age%7D:%7Bself.sound%7D.%22 \n",
+            "lines": "16"
+        },
+        {
+            "label": "2025-09-19_11-02-54",
+            "content": "class Animal:\n    def __init__(self, species: str, age: int, sound: str):\n        self.species: str = species\n        self.age: int = 0\n        self.sound: str = sound\n    \n    def makeSound(self, ) -> None:\n        print(self.sound)\n\n    def ageBy(self, years: int) -> None:\n        self.age += years\n\n    def showInfo(self, ) -> None:\n        print(f\"Species: {self.species}, Age: {self.age}, Sound: {self.sound}\") \n    \n    def __str__(self) -> str:\n        return f\"{self.species}:{self.age}:{self.sound}.\" ",
+            "lines": "17"
+        }
+    ]
+}
