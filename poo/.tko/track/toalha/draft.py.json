@@ -1,0 +1,34 @@
+{
+    "patches": [
+        {
+            "label": "2025-09-18_17-23-43",
+            "content": "@@ -1,134 +1,22 @@\n-class Towel:%0A    def __init__(self):%0A        self.color: str = %22%22%0A        self.size: str = %22%22%0A        self.wetness: int = 0%0A%0A%0A        \n+print(%22Hello, World!%22)\n",
+            "lines": "1"
+        },
+        {
+            "label": "2025-09-18_19-11-17",
+            "content": "@@ -9,16 +9,8 @@\n wel:\n- #classe\n %0A   \n@@ -31,31 +31,8 @@\n self\n-, color: str, size: str\n ):%0A \n@@ -56,21 +56,18 @@\n : str = \n-color\n+%22%22\n %0A       \n@@ -84,20 +84,18 @@\n : str = \n-size\n+%22%22\n %0A       \n@@ -123,75 +123,8 @@\n 0%0A%0A%0A\n-#refer%C3%AAncias%0Atowel: Towel = Towel(%22blue%22, %22P%22)%0Aprint(towel.color)%0A%0A\n     \n",
+            "lines": "8"
+        },
+        {
+            "label": "2025-09-18_19-45-56",
+            "content": "@@ -172,159 +172,59 @@\n ias%0A\n-print(%22QUal a cor da sua toalha?%22)%0Acolor = input()%0Atowel: Towel = Towel(color, %22P%22) #objeto%0Aprint(f%22Sua toalha %C3%A9 %7Btowel.color%7D e tamanho %7Btowel.size%7D.%22\n+towel: Towel = Towel(%22blue%22, %22P%22)%0Aprint(towel.color\n )%0A%0A \n",
+            "lines": "12"
+        },
+        {
+            "label": "2025-09-18_19-49-53",
+            "content": "@@ -176,17 +176,17 @@\n print(%22Q\n-u\n+U\n al a cor\n@@ -294,16 +294,39 @@\n l.color%7D\n+ e tamanho %7Btowel.size%7D\n .%22)%0A%0A   \n",
+            "lines": "14"
+        },
+        {
+            "label": "2025-09-18_19-50-42",
+            "content": "@@ -6,19 +6,17 @@\n  Towel: \n- # \n+#\n classe%0A \n@@ -158,1083 +158,157 @@\n  0%0A%0A\n-    def dry(self, amount: int) -%3E None:%0A        self.wetness += amount%0A        if self.wetness %3E self.getMaxWetness():%0A            self.wetness = self.getMaxWetness()%0A%0A    def wringOut(self) -%3E None:%0A        self.wetness = 0%0A%0A    def getMaxWetness(self) -%3E int:%0A        if self.size == %22P%22:%0A            return 10%0A        if self.size == %22M%22:%0A            return 20%0A        if self.size == %22G%22:%0A            return 30%0A        return 0%0A%0A    def isDry(self) -%3E bool:%0A        return self.wetness == 0%0A%0A    def show(self) -%3E None:%0A        print(self)%0A%0A    def __str__(self) -%3E str:%0A        return f%22%7Bself.color%7D %7Bself.size%7D %7Bself.wetness%7D%22%0A%0A%0A# Testes%0Atowel = Towel(%22Azul%22, %22P%22)%0Atowel.show()  # Azul P 0%0Atowel.dry(5)%0Atowel.show()  # Azul P 5%0Aprint(towel.isDry())  # False%0Atowel.dry(5)%0Atowel.show()  # Azul P 10%0Atowel.dry(5)  # msg: toalha encharcada%0Atowel.show()  # Azul P 10%0A%0Atowel.wringOut()%0Atowel.show()  # Azul P 0%0A%0Atowel = Towel(%22Verde%22, %22G%22)%0Aprint(towel.isDry())  # True%0Atowel.dry(30)%0Atowel.show()  # Verde G 30%0Aprint(towel.isDry())  # False%0Atowel.dry(1)  # msg: toalha encharcada%0A\n+%0A#refer%C3%AAncias%0Aprint(%22Qual a cor da sua toalha?%22)%0Acolor = input()%0Atowel: Towel = Towel(color, %22P%22) #objeto%0Aprint(f%22Sua toalha %C3%A9 %7Btowel.color%7D.%22)%0A%0A        \n",
+            "lines": "14"
+        },
+        {
+            "label": "2025-09-19_08-35-13",
+            "content": "class Towel:  # classe\n    def __init__(self, color: str, size: str):\n        self.color: str = color\n        self.size: str = size\n        self.wetness: int = 0\n\n    def dry(self, amount: int) -> None:\n        self.wetness += amount\n        if self.wetness > self.getMaxWetness():\n            self.wetness = self.getMaxWetness()\n\n    def wringOut(self) -> None:\n        self.wetness = 0\n\n    def getMaxWetness(self) -> int:\n        if self.size == \"P\":\n            return 10\n        if self.size == \"M\":\n            return 20\n        if self.size == \"G\":\n            return 30\n        return 0\n\n    def isDry(self) -> bool:\n        return self.wetness == 0\n\n    def show(self) -> None:\n        print(self)\n\n    def __str__(self) -> str:\n        return f\"{self.color} {self.size} {self.wetness}\"\n\n\n# Testes\ntowel = Towel(\"Azul\", \"P\")\ntowel.show()  # Azul P 0\ntowel.dry(5)\ntowel.show()  # Azul P 5\nprint(towel.isDry())  # False\ntowel.dry(5)\ntowel.show()  # Azul P 10\ntowel.dry(5)  # msg: toalha encharcada\ntowel.show()  # Azul P 10\n\ntowel.wringOut()\ntowel.show()  # Azul P 0\n\ntowel = Towel(\"Verde\", \"G\")\nprint(towel.isDry())  # True\ntowel.dry(30)\ntowel.show()  # Verde G 30\nprint(towel.isDry())  # False\ntowel.dry(1)  # msg: toalha encharcada\n",
+            "lines": "53"
+        }
+    ]
+}
