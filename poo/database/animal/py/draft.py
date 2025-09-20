@@ -9,14 +9,19 @@ class Animal:
         self.sound = sound
 
     def makeSound(self) -> str:
-        if(self.age == 0):
+        if (self.age == 0):
             return "---"
 
-        if(self.age == 4):
+        if (self.age == 4):
             return "RIP"
 
         return self.sound
+
     def ageBy(self, age: int) -> None:
-        if(self.age + age >= 4):
+        if (self.age + age >= 4):
             self.age = 4
             print(f"warning: {self.species} morreu")
+        self.age += age
+
+    def __str__(self) -> str:
+        return f"{self.species}:{self.age}:{self.sound}"

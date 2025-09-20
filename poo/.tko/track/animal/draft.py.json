@@ -22,8 +22,13 @@
         },
         {
             "label": "2025-09-19_11-02-54",
-            "content": "class Animal:\n    def __init__(self, species: str, age: int, sound: str):\n        self.species: str = species\n        self.age: int = 0\n        self.sound: str = sound\n    \n    def makeSound(self, ) -> None:\n        print(self.sound)\n\n    def ageBy(self, years: int) -> None:\n        self.age += years\n\n    def showInfo(self, ) -> None:\n        print(f\"Species: {self.species}, Age: {self.age}, Sound: {self.sound}\") \n    \n    def __str__(self) -> str:\n        return f\"{self.species}:{self.age}:{self.sound}.\" ",
+            "content": "@@ -120,156 +120,57 @@\n elf.\n-sound: str = sound%0A        self.age: int%0A%0A    def Animal(self, species: str, sound: str):%0A        self.species = species%0A        self.sound = sound%0A\n+age: int = 0%0A        self.sound: str = sound%0A    \n %0A   \n@@ -192,141 +192,35 @@\n self\n+, \n ) -%3E \n-str:%0A        if (self.age == 0):%0A            return %22---%22%0A%0A        if (self.age == 4):%0A            return %22RIP%22%0A%0A        return \n+None:%0A        print(\n self\n@@ -225,16 +225,17 @@\n lf.sound\n+)\n %0A%0A    de\n@@ -248,19 +248,21 @@\n y(self, \n-age\n+years\n : int) -\n@@ -281,12 +281,8 @@\n     \n-if (\n self\n@@ -291,49 +291,51 @@\n ge +\n- age %3E= 4):%0A            self.age = 4%0A    \n+= years%0A%0A    def showInfo(self, ) -%3E None:%0A\n     \n@@ -350,15 +350,15 @@\n t(f%22\n-warning\n+Species\n : %7Bs\n@@ -373,42 +373,54 @@\n ies%7D\n- morreu%22)%0A        self.age += age%0A\n+, Age: %7Bself.age%7D, Sound: %7Bself.sound%7D%22) %0A    \n %0A   \n@@ -505,6 +505,7 @@\n und%7D\n-%22%0A\n+.%22 \n",
             "lines": "17"
+        },
+        {
+            "label": "2025-09-20_15-00-44",
+            "content": "class Animal:\n    def __init__(self, species: str, age: int, sound: str):\n        self.species: str = species\n        self.sound: str = sound\n        self.age: int\n\n    def Animal(self, species: str, sound: str):\n        self.species = species\n        self.sound = sound\n\n    def makeSound(self) -> str:\n        if (self.age == 0):\n            return \"---\"\n\n        if (self.age == 4):\n            return \"RIP\"\n\n        return self.sound\n\n    def ageBy(self, age: int) -> None:\n        if (self.age + age >= 4):\n            self.age = 4\n            print(f\"warning: {self.species} morreu\")\n        self.age += age\n\n    def __str__(self) -> str:\n        return f\"{self.species}:{self.age}:{self.sound}\"\n",
+            "lines": "27"
         }
     ]
 }
