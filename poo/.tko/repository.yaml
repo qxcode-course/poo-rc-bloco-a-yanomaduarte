@@ -5,14 +5,12 @@ filter:
 - BLOCO_B
 version: 0.0.1
 database: database
-expanded:
-- campanha-principal
-- bloco_b-primeiras-classes
+expanded: []
 tasks: {}
 flags:
-  quests: 0
+  quests: 2
   tracks: 0
   tasks: 0
-  graph: 0
+  graph: 1
   xray: 0
 index: animal
