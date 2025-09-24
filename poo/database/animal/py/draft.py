@@ -1,35 +1,37 @@
 class Animal:
-    def __init__(self, species: str, age: int, sound: str):
+    def __init__(self, species: str, sound: str):
         self.species: str = species
         self.sound: str = sound
-        self.age: int = age
+        self.age: int = 0
 
     def Animal(self, species: str, sound: str):
         self.species = species
         self.sound = sound
 
-    def makeSound(self) -> str:
-        if (self.age == 0):
-            return "---"
+    def ageBy(self, increment: int) -> None:
+        if self.age >= 4:
+            print(f"warning: {self.species} morreu")
+            return
 
-        if (self.age >= 4):
-            return "RIP"
-
-        return self.makeSound()
-
-    def ageBy(self, age: int) -> None:
-        if (self.age + age >= 4):
+        self.age += increment
+        if self.age >= 4:
             self.age = 4
             print(f"warning: {self.species} morreu")
 
-    def show(self) -> None:
-        print(self)
+    def makeSound(self) -> str:
+        if self.age == 0:
+            return "---"
+        elif self.age == 4:
+            return "RIP"
+        else:
+            return self.makeSound()
 
     def __str__(self) -> str:
         return f"{self.species}:{self.age}:{self.sound}"
 
+
 def main() -> None:
-    animal = Animal("", 0, "")
+    animal = Animal("", "")
     while True:
         line: str = input()
         print("$" + line)
@@ -37,19 +39,20 @@ def main() -> None:
 
         if args[0] == "end":
             break
-        elif args[0] == "criar":
+        elif args[0] == "init":
             species: str = args[1]
-            age: int = int(args[2])
-            sound: str = args[3]
-            animal = Animal(species, age, sound)
+            sound: str = args[2]
+            animal = Animal(species, sound)
         elif args[0] == "fazer":
             print(animal.makeSound())
-        elif args[0] == "envelhecer":
+        elif args[0] == "grow":
             age: int = int(args[1])
             animal.ageBy(age)
-        elif args[0] == "mostrar":
-            print("$" + str(animal))
+        elif args[0] == "show":
+            print(animal)
         else:
             print("fail: comando não encontrado")
 
-main()
+
+if __name__ == "__main__":
+    main()
