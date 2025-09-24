@@ -62,7 +62,6 @@ def main():
 if __name__ == "__main__":
     main()
 
-# Testes
 towel = Towel("Azul", "P")
 towel.show()  # Azul P 0
 towel.dry(5)
