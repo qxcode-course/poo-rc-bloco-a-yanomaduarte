@@ -1,0 +1,9 @@
+{
+    "patches": [
+        {
+            "label": "2025-09-21_15-58-51",
+            "content": "class Animal:\n    def __init__(self, species: str, age: int, sound: str):\n        self.species: str = species\n        self.sound: str = sound\n        self.age: int\n\n    def Animal(self, species: str, sound: str):\n        self.species = species\n        self.sound = sound\n\n    def makeSound(self) -> str:\n        if (self.age == 0):\n            return \"---\"\n\n        if (self.age == 4):\n            return \"RIP\"\n\n        return self.sound\n\n    def ageBy(self, age: int) -> None:\n        if (self.age + age >= 4):\n            self.age = 4\n            print(f\"warning: {self.species} morreu\")\n        self.age += age\n\n    def __str__(self) -> str:\n        return f\"{self.species}:{self.age}:{self.sound}\"\n",
+            "lines": "27"
+        }
+    ]
+}

@@ -24,7 +24,7 @@ class Animal:
         elif self.age == 4:
             return "RIP"
         else:
-            return self.makeSound()
+            return self.sound
 
     def __str__(self) -> str:
         return f"{self.species}:{self.age}:{self.sound}"
@@ -43,7 +43,7 @@ def main() -> None:
             species: str = args[1]
             sound: str = args[2]
             animal = Animal(species, sound)
-        elif args[0] == "fazer":
+        elif args[0] == "noise":
             print(animal.makeSound())
         elif args[0] == "grow":
             age: int = int(args[1])
