@@ -61,23 +61,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-towel = Towel("Azul", "P")
-towel.show()  # Azul P 0
-towel.dry(5)
-towel.show()  # Azul P 5
-print(towel.isDry())  # False
-towel.dry(5)
-towel.show()  # Azul P 10
-towel.dry(5)  # msg: toalha encharcada
-towel.show()  # Azul P 10
-
-towel.wringOut()
-towel.show()  # Azul P 0
-
-towel = Towel("Verde", "G")
-print(towel.isDry())  # True
-towel.dry(30)
-towel.show()  # Verde G 30
-print(towel.isDry())  # False
-towel.dry(1)  # msg: toalha encharcada
